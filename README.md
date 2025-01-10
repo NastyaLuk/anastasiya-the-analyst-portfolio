@@ -1,11 +1,17 @@
 # Business Analyst | Data Analyst | BI-specialist
-#### Technical Skills: Power BI & Tableau, SQL, Python, MATLAB, MS Office, MS Dynamics 365
+**Technical Skills:** MS Office, Power BI & Tableau, SQL, Python, MATLAB, MS Dynamics 365.
+[View Russian version.]()
+## Contacts:
+Email: ssur.tot@gmail.com
 
+[LinkedIn](https://www.linkedin.com/in/anastasiya-lukyanava-642954344/)
 ## Education
-Belarusian State Economic University - «Economic cybernetics» | 2021 - 2025
+**Belarusian State Economic University** - «Economic cybernetics» | 2021 - 2025
+
 Bachelor’s Degree
 
-IT Academy - «Business Analysis in Software Development» | Sep 2024 - Dec 2024
+**IT Academy** - «Business Analysis in Software Development» | Sep 2024 - Dec 2024
+
 Project - NFTeam: Project Management System with Gamification
 
 ## Work Experience
@@ -48,23 +54,23 @@ Development of a project management system featuring task planning, analytical r
 #Images: diagrams, prototype fragments, and benchmarking table.
 #Description: brief text under each element.
 
-### 2 Bank data analysis and metrics visualization
+### 2 Bank data analysis and metrics visualization | Nov 2024
 ---
 **Done:** 7 SQL queries, 3 Power BI dashboards
 #### Description:
 The project focuses on the analysis and visualization of data related to banking activities. It includes the development of SQL queries for data processing and the creation of analytical dashboards. The main emphasis is on studying customer activity, revenue by city, purchase structure, repeat customers, and campaign effectiveness. The data is presented through interactive dashboards that enable filtering by cities, years, and other metrics for detailed analysis. The project is aimed at developing tools that facilitate informed decision-making in customer relationship management and business process optimization.
 
-### 3 Road Traffic Accident Analytics
+### 3 Road Traffic Accident Analytics | June 2024
 ---
 #### Description:
 This dashboard was created to analyze and monitor road traffic accident (RTA) statistics. It provides detailed information on the number of casualties, the nature of accidents, types of vehicles involved, road conditions, and other key metrics. The data used allows for the identification of critical factors affecting road safety and supports decision-making to reduce accident rates.
 
-### 4 Stock Analysis Dashboard Using Streamlit
+### 4 Stock Analysis Dashboard Using Streamlit | Nov 2023
 ---
 #### Description:
 The project involved developing a stock analytics dashboard using Python and the Streamlit library. The dashboard provides an interactive and user-friendly interface, featuring a collapsible sidebar with filters for company name, stock ticker, and year. The main section showcases a table with annual stock data, alongside visualizations such as charts and a calculated performance coefficient. This tool offers a streamlined approach to exploring stock data and supports informed investment decisions.
 
-### 5 Jacobi rotation matrix on MATLAB
+### 5 Jacobi rotation matrix on MATLAB | Apr 2023 - May 2023
 ---
 #### Description:
 The project explores the implementation of the Jacobi rotation method for solving the complete symmetric eigenvalue problem. The method, renowned for its simplicity and accuracy, is applied to calculate the eigenvalues and eigenvectors of symmetric matrices. The project involves developing a MATLAB program to demonstrate the algorithm's practical application, supported by examples and results.
@@ -111,7 +117,7 @@ end
 - Accuracy: verified results with MATLAB’s built-in functions, ensuring reliability.  
 - Scalability: designed the program to handle various symmetric matrices and scenarios.
 
-### 6 MMA Battle Simulator
+### 6 MMA Battle Simulator | Apr 2023 - May 2023
 ---
 **Role:** Business Analyst
 
@@ -124,7 +130,7 @@ end
 3. Documentation: the requirements structure, functionality description and analog analysis were prepared.
 4. Scalability: a flexible product with the ability to add new functions was designed.
 
-### 7 Conscious consumption of cosmetic products: the choice of Belarusians
+### 7 Conscious consumption of cosmetic products: the choice of Belarusians | Apr 2022 - May 2022
 ---
 #### Description:
 Conducted a survey of over 200 respondents (205 women and 16 men) to analyze consumer behavior in the Belarusian skincare market. The study explored factors influencing product selection, such as natural ingredients, price, and brand reputation, as well as the role of sustainability in consumer preferences. Recommendations were developed for improving the competitiveness of Belarusian cosmetics through environmentally friendly ingredient selection and packaging. A detailed report with insights and recommendations on selected products was prepared, highlighting the growing trend of conscious consumption in Belarus.
