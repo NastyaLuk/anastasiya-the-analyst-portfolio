@@ -1,5 +1,6 @@
 # Business Analyst | Data Analyst | BI-specialist
 **Technical Skills:** MS Office, Power BI & Tableau, SQL, Python, MATLAB, MS Dynamics 365.
+
 [View Russian version.]()
 ## Contacts:
 Email: ssur.tot@gmail.com
@@ -50,25 +51,32 @@ Development of a project management system featuring task planning, analytical r
 
 **Tools Used:** Mindmup, Draw.io, Axure RP, Google Docs.
 #### Visuals:
-
-#Images: diagrams, prototype fragments, and benchmarking table.
-#Description: brief text under each element.
+![Use Case Diagram_NFTeam](/1.png)
+![Profile_NFTeam](/2.png)
+![Tasks_NFTeam](/3.png)
 
 ### 2 Bank data analysis and metrics visualization | Nov 2024
 ---
 **Done:** 7 SQL queries, 3 Power BI dashboards
 #### Description:
 The project focuses on the analysis and visualization of data related to banking activities. It includes the development of SQL queries for data processing and the creation of analytical dashboards. The main emphasis is on studying customer activity, revenue by city, purchase structure, repeat customers, and campaign effectiveness. The data is presented through interactive dashboards that enable filtering by cities, years, and other metrics for detailed analysis. The project is aimed at developing tools that facilitate informed decision-making in customer relationship management and business process optimization.
+![Bank_dashboard_1](/8.png)
+![Bank_dashboard_2](/9.png)
+![Bank_dashboard_2](/10.png)
 
 ### 3 Road Traffic Accident Analytics | June 2024
 ---
 #### Description:
 This dashboard was created to analyze and monitor road traffic accident (RTA) statistics. It provides detailed information on the number of casualties, the nature of accidents, types of vehicles involved, road conditions, and other key metrics. The data used allows for the identification of critical factors affecting road safety and supports decision-making to reduce accident rates.
+![RTA_Analysis](/7.PNG)
 
 ### 4 Stock Analysis Dashboard Using Streamlit | Nov 2023
 ---
 #### Description:
 The project involved developing a stock analytics dashboard using Python and the Streamlit library. The dashboard provides an interactive and user-friendly interface, featuring a collapsible sidebar with filters for company name, stock ticker, and year. The main section showcases a table with annual stock data, alongside visualizations such as charts and a calculated performance coefficient. This tool offers a streamlined approach to exploring stock data and supports informed investment decisions.
+![Stok_Analusis_1](/Crocs и S&P Global_1.PNG)
+![Stok_Analusis_2](/Crocs и S&P Global_2.PNG)
+![Stok_Analusis_3](/Crocs и S&P Global_3.PNG)
 
 ### 5 Jacobi rotation matrix on MATLAB | Apr 2023 - May 2023
 ---
@@ -83,28 +91,9 @@ The project explores the implementation of the Jacobi rotation method for solvin
 #### Practical Implementation: 
 The MATLAB implementation involves the following core functions:  
 
-- **Jacobi Rotation Function (`JA_COBI`):**  
+**Jacobi Rotation Function (`JA_COBI`):**  
    Implements the iterative Jacobi algorithm.  
-```matlab
-function [A, eigenVectorMatrix, k] = JA_COBI(A)
-[row, col] = size(A);
-eigenVectorMatrix = eye(row, col);
-k = 0;
-
-while(~isDiagonal(A))
-    phi = findPhi(A);
-    [largest, row_ind, col_ind] = findLargestElement(A);
-    T = eye(row, col);
-    T(row_ind, row_ind) = cos(phi);
-    T(row_ind, col_ind) = sin(phi);
-    T(col_ind, row_ind) = -sin(phi);
-    T(col_ind, col_ind) = cos(phi);
-    A = T' * A * T;
-    eigenVectorMatrix = eigenVectorMatrix * T;
-    k = k + 1;
-end
-end
-```
+![Jacobi_code](/13.png)
 
 - Supporting Functions: 
    - `findPhi`: computes the rotation angle.  
@@ -136,3 +125,6 @@ end
 Conducted a survey of over 200 respondents (205 women and 16 men) to analyze consumer behavior in the Belarusian skincare market. The study explored factors influencing product selection, such as natural ingredients, price, and brand reputation, as well as the role of sustainability in consumer preferences. Recommendations were developed for improving the competitiveness of Belarusian cosmetics through environmentally friendly ingredient selection and packaging. A detailed report with insights and recommendations on selected products was prepared, highlighting the growing trend of conscious consumption in Belarus.
 
 [Publication](http://edoc.bseu.by:8080/handle/edoc/97163?locale=ru)
+
+![Survey](/12.png)
+![Content](/11.png)
