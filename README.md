@@ -1,7 +1,7 @@
 # Business Analyst | Data Analyst | BI-specialist
 **Technical Skills:** MS Office, Power BI & Tableau, SQL, Python, MATLAB, MS Dynamics 365.
 
-[View Russian version.]()
+[View Russian version.](https://nastyaluk.github.io/anastasiya-the-analyst-portfolio-rus/)
 ## Contacts:
 Email: ssur.tot@gmail.com
 
@@ -11,7 +11,7 @@ Email: ssur.tot@gmail.com
 
 Bachelor’s Degree
 
-**IT Academy** - «Business Analysis in Software Development» | Sep 2024 - Dec 2024
+**IT Academy** - «Business Analysis in Software Development»
 
 Project - NFTeam: Project Management System with Gamification
 
@@ -51,19 +51,84 @@ Development of a project management system featuring task planning, analytical r
 
 **Tools Used:** Mindmup, Draw.io, Axure RP, Google Docs.
 #### Visuals:
-![Use Case Diagram_NFTeam](/1.png)
 **Use Case diagram**
-
-![Profile_NFTeam](/2.png)
+![Use Case Diagram_NFTeam](/1.png)
 **Profile view**
-![Tasks_NFTeam](/3.png)
+![Profile_NFTeam](/2.png)
 **Tasks view**
+![Tasks_NFTeam](/3.png)
 
 ### 2 Bank data analysis and metrics visualization | Nov 2024
 ---
 **Done:** 7 SQL queries, 3 Power BI dashboards
 #### Description:
 The project focuses on the analysis and visualization of data related to banking activities. It includes the development of SQL queries for data processing and the creation of analytical dashboards. The main emphasis is on studying customer activity, revenue by city, purchase structure, repeat customers, and campaign effectiveness. The data is presented through interactive dashboards that enable filtering by cities, years, and other metrics for detailed analysis. The project is aimed at developing tools that facilitate informed decision-making in customer relationship management and business process optimization.
+
+#### SQL Query for Clients with Multiple Loans in September 2023
+
+#### **Objective**  
+Retrieve detailed information for corporate clients (ЮЛ) who opened more than one loan agreement in September 2023. The output should include:  
+1. Loan numbers (`num_loan`) for each client.  
+2. Remaining balance (principal + overdue) for each loan as of 30.09.2023 (`rest_eq_loan`).  
+3. Total remaining balance for all loans of the client (`rest_eq_client`).  
+
+#### Input Data 
+1. **LOANS**: Contains loan agreements with SCD Type 2 implementation. Active rows are identified by `dt_end = '3001-01-01'`.  
+2. **CLIENTS**: Stores client details, also using SCD Type 2. Active clients have `dt_end = '3001-01-01'`.  
+3. **LOANS_FACT**: Holds daily loan balances, including principal (`rest_od_eq`) and overdue (`rest_pd_eq`) amounts in BYN equivalent.  
+
+#### SQL Query
+
+```sql
+SELECT 
+    ld.name_client, 
+    ld.num_loan, 
+    ld.rest_eq_loan, 
+    cs.rest_eq_client
+FROM (
+        SELECT 
+            c.name_client, 
+            l.num_loan, 
+            l.id_client,
+            SUM(f.rest_od_eq + f.rest_pd_eq) AS rest_eq_loan
+        FROM LOANS l
+        INNER JOIN CLIENTS c ON l.id_client = c.id_client
+        INNER JOIN LOANS_FACT f ON l.id_loan = f.id_loan
+        WHERE c.type_client = 'ЮЛ'
+            AND l.dt_open_loan BETWEEN '2023-09-01' AND '2023-09-30'
+            AND f.dt = '2023-09-30'
+            AND l.dt_end = '3001-01-01'
+            AND c.dt_end = '3001-01-01'
+        GROUP BY c.name_client, l.num_loan, l.id_client
+    ) ld
+INNER JOIN 
+    (
+        SELECT 
+            c.name_client, 
+            l.id_client, 
+            SUM(f.rest_od_eq + f.rest_pd_eq) AS rest_eq_client
+        FROM LOANS l
+        INNER JOIN CLIENTS c ON l.id_client = c.id_client
+        INNER JOIN LOANS_FACT f ON l.id_loan = f.id_loan
+        WHERE c.type_client = 'ЮЛ'
+            AND l.dt_open_loan BETWEEN '2023-09-01' AND '2023-09-30'
+            AND f.dt = '2023-09-30'
+            AND l.dt_end = '3001-01-01'
+            AND c.dt_end = '3001-01-01'
+        GROUP BY c.name_client, l.id_client
+        HAVING COUNT(l.id_loan) > 1
+    ) cs
+ON ld.id_client = cs.id_client
+ORDER BY ld.name_client;
+```
+
+#### Output Fields
+- **`name_client`**: Name of the corporate client.  
+- **`num_loan`**: Loan agreement number.  
+- **`rest_eq_loan`**: Remaining balance (principal + overdue) for each loan as of 30.09.2023.  
+- **`rest_eq_client`**: Total remaining balance for all loans of the client as of 30.09.2023.  
+
+#### Dashboards:
 ![Bank_dashboard_1](/8.png)
 ![Bank_dashboard_2](/9.png)
 ![Bank_dashboard_2](/10.png)
@@ -131,5 +196,4 @@ Conducted a survey of over 200 respondents (205 women and 16 men) to analyze con
 [Publication](http://edoc.bseu.by:8080/handle/edoc/97163?locale=ru)
 
 ![Survey](/12.png)
-
 ![Content](/11.png)
