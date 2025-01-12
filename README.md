@@ -12,7 +12,8 @@ Email: ssur.tot@gmail.com
 Bachelor’s Degree
 
 **IT Academy** - «Business Analysis in Software Development»
-Sep 2024 - Dec 2024
+| Sep 2024 - Dec 2024
+
 Project - NFTeam: Project Management System with Gamification
 
 ## Work Experience
@@ -67,7 +68,7 @@ The project focuses on the analysis and visualization of data related to banking
 
 #### SQL Query for Clients with Multiple Loans in September 2023
 
-#### **Objective**  
+#### Objective  
 Retrieve detailed information for corporate clients (ЮЛ) who opened more than one loan agreement in September 2023. The output should include:  
 1. Loan numbers (`num_loan`) for each client.  
 2. Remaining balance (principal + overdue) for each loan as of 30.09.2023 (`rest_eq_loan`).  
@@ -162,8 +163,7 @@ The project explores the implementation of the Jacobi rotation method for solvin
 The MATLAB implementation involves the following core functions:  
 
 **Jacobi Rotation Function (`JA_COBI`):**  
-   Implements the iterative Jacobi algorithm.  
-![Jacobi_code](/13.png)
+Implements the iterative Jacobi algorithm.  
 
 ```matlab
 function [A, eigenVectorMatrix, k] = JA_COBI(A)
@@ -195,10 +195,10 @@ function [A, eigenVectorMatrix, k] = JA_COBI(A)
     end
 end
 ```
-- Supporting Functions: 
-   - `findPhi`: computes the rotation angle.  
-   - `findLargestElement`: identifies the largest off-diagonal matrix element.  
-   - `isDiagonal`: checks if a matrix is diagonal.
+Supporting Functions: 
+ - `findPhi`: computes the rotation angle.  
+ - `findLargestElement`: identifies the largest off-diagonal matrix element.  
+ - `isDiagonal`: checks if a matrix is diagonal.
 
 #### Highlights: 
 - Algorithmic Implementation: developed a complete Jacobi rotation algorithm in MATLAB.  
