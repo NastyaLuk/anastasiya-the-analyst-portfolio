@@ -12,7 +12,7 @@ Email: ssur.tot@gmail.com
 Bachelor’s Degree
 
 **IT Academy** - «Business Analysis in Software Development»
-
+Sep 2024 - Dec 2024
 Project - NFTeam: Project Management System with Gamification
 
 ## Work Experience
@@ -44,6 +44,7 @@ Development of a project management system featuring task planning, analytical r
 3. Creating diagrams (Use case, Activity, context diagram).
 4. Developing an interface prototype (Axure RP).
 5. Conducting competitive analysis.
+
 #### Project Outcomes:
 1. SWOT analysis and benchmarking.
 2. Vision & Scope and SRS documents.
@@ -164,6 +165,36 @@ The MATLAB implementation involves the following core functions:
    Implements the iterative Jacobi algorithm.  
 ![Jacobi_code](/13.png)
 
+```matlab
+function [A, eigenVectorMatrix, k] = JA_COBI(A)
+    % JA_COBI - Implements the Jacobi Rotation Method for symmetric matrices.
+    % A: Input symmetric matrix
+    % eigenVectorMatrix: Matrix of eigenvectors
+    % k: Number of iterations performed
+
+    [row, col] = size(A);
+    eigenVectorMatrix = eye(row, col); % Initialize eigenvector matrix
+    k = 0; % Initialize iteration count
+
+    % Iterate until the matrix becomes diagonal
+    while(~isDiagonal(A))
+        phi = findPhi(A); % Calculate rotation angle
+        [largest, row_ind, col_ind] = findLargestElement(A); % Find largest off-diagonal element
+        T = eye(row, col); % Initialize transformation matrix
+
+        % Set rotation values
+        T(row_ind, row_ind) = cos(phi);
+        T(row_ind, col_ind) = sin(phi);
+        T(col_ind, row_ind) = -sin(phi);
+        T(col_ind, col_ind) = cos(phi);
+
+        % Perform transformation
+        A = T' * A * T;
+        eigenVectorMatrix = eigenVectorMatrix * T;
+        k = k + 1; % Increment iteration count
+    end
+end
+```
 - Supporting Functions: 
    - `findPhi`: computes the rotation angle.  
    - `findLargestElement`: identifies the largest off-diagonal matrix element.  
@@ -193,7 +224,7 @@ The MATLAB implementation involves the following core functions:
 #### Description:
 Conducted a survey of over 200 respondents (205 women and 16 men) to analyze consumer behavior in the Belarusian skincare market. The study explored factors influencing product selection, such as natural ingredients, price, and brand reputation, as well as the role of sustainability in consumer preferences. Recommendations were developed for improving the competitiveness of Belarusian cosmetics through environmentally friendly ingredient selection and packaging. A detailed report with insights and recommendations on selected products was prepared, highlighting the growing trend of conscious consumption in Belarus.
 
-[Publication](http://edoc.bseu.by:8080/handle/edoc/97163?locale=ru)
-
 ![Survey](/12.png)
 ![Content](/11.png)
+
+[Publication](http://edoc.bseu.by:8080/handle/edoc/97163?locale=ru)
