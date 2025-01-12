@@ -52,8 +52,12 @@ Development of a project management system featuring task planning, analytical r
 **Tools Used:** Mindmup, Draw.io, Axure RP, Google Docs.
 #### Visuals:
 ![Use Case Diagram_NFTeam](/1.png)
+**Use Case diagram**
+
 ![Profile_NFTeam](/2.png)
+**Profile view**
 ![Tasks_NFTeam](/3.png)
+**Tasks view**
 
 ### 2 Bank data analysis and metrics visualization | Nov 2024
 ---
@@ -75,8 +79,8 @@ This dashboard was created to analyze and monitor road traffic accident (RTA) st
 #### Description:
 The project involved developing a stock analytics dashboard using Python and the Streamlit library. The dashboard provides an interactive and user-friendly interface, featuring a collapsible sidebar with filters for company name, stock ticker, and year. The main section showcases a table with annual stock data, alongside visualizations such as charts and a calculated performance coefficient. This tool offers a streamlined approach to exploring stock data and supports informed investment decisions.
 ![Stok_Analusis_1](/Crocs и S&P Global_1.PNG)
-![Stok_Analusis_2](/Crocs и S&P Global_2.PNG)
-![Stok_Analusis_3](/Crocs и S&P Global_3.PNG)
+![Stok_Analusis_2](/Crocs и S&P Global_3.PNG)
+![Stok_Analusis_3](/Crocs и S&P Global_2.PNG)
 
 ### 5 Jacobi rotation matrix on MATLAB | Apr 2023 - May 2023
 ---
@@ -127,4 +131,5 @@ Conducted a survey of over 200 respondents (205 women and 16 men) to analyze con
 [Publication](http://edoc.bseu.by:8080/handle/edoc/97163?locale=ru)
 
 ![Survey](/12.png)
+
 ![Content](/11.png)
